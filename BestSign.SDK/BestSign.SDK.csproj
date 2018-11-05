@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FED78C80-95C3-4B5D-8481-DE5437DAFA7B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BestSign.SDK</RootNamespace>
+    <AssemblyName>BestSign.SDK</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BestSignSDK\API\SignatureServiceAPI.cs" />
+    <Compile Include="BestSignSDK\API\SingleDocServiceAPI.cs" />
+    <Compile Include="BestSignSDK\API\StorageServiceAPI.cs" />
+    <Compile Include="BestSignSDK\API\UserSerivceAPI.cs" />
+    <Compile Include="BestSignSDK\Constants.cs" />
+    <Compile Include="BestSignSDK\Enum\RegEnum.cs" />
+    <Compile Include="BestSignSDK\Extends.cs" />
+    <Compile Include="BestSignSDK\HttpMethods.cs" />
+    <Compile Include="BestSignSDK\HttpService.cs" />
+    <Compile Include="BestSignSDK\IHttpMethod.cs" />
+    <Compile Include="BestSignSDK\IHttpService.cs" />
+    <Compile Include="BestSignSDK\Push\BasePush.cs" />
+    <Compile Include="BestSignSDK\Push\CertApplyPush.cs" />
+    <Compile Include="BestSignSDK\Push\IPush.cs" />
+    <Compile Include="BestSignSDK\Push\SignContractPush.cs" />
+    <Compile Include="BestSignSDK\Result\AsyncApplyCertStatusResult.cs" />
+    <Compile Include="BestSignSDK\Result\BaseResult.cs" />
+    <Compile Include="BestSignSDK\Result\CertInfoResult.cs" />
+    <Compile Include="BestSignSDK\Result\CommonResult.cs" />
+    <Compile Include="BestSignSDK\Result\CreateResult.cs" />
+    <Compile Include="BestSignSDK\Result\GetCertResult.cs" />
+    <Compile Include="BestSignSDK\Result\GetEnterpriseCredentialResult.cs" />
+    <Compile Include="BestSignSDK\Result\GetInfoResult.cs" />
+    <Compile Include="BestSignSDK\Result\GetPersonalCredentialResult.cs" />
+    <Compile Include="BestSignSDK\Result\GetPreviewURLResult.cs" />
+    <Compile Include="BestSignSDK\Result\GetSignerConfigResult.cs" />
+    <Compile Include="BestSignSDK\Result\GetSignerStatusResult.cs" />
+    <Compile Include="BestSignSDK\Result\PDFVerifySignaturesResult.cs" />
+    <Compile Include="BestSignSDK\Result\RegResult.cs" />
+    <Compile Include="BestSignSDK\Result\StorageContractUploadResult.cs" />
+    <Compile Include="BestSignSDK\Result\StorageUploadResult.cs" />
+    <Compile Include="BestSignSDK\RSAEncryption.cs" />
+    <Compile Include="BestSignSDK\RSAExtensions.cs" />
+    <Compile Include="BestSignSDK\RSAKey.cs" />
+    <Compile Include="BestSignSDK\RSAKeySizeType.cs" />
+    <Compile Include="BestSignSDK\RSAKeyType.cs" />
+    <Compile Include="BestSignSDK\SignUtils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
